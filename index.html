@@ -20,16 +20,15 @@
                         <i class="fa-brands fa-codepen"></i>
                         <h1>Lourdes Giolongo</h1>
                     </div>
-                    <nav id="nav">
+                    <nav id="nav" class="responsive">
                         <a href="#inicio">Inicio</a>
-                        <a href="#servicios">Servicios</a>
                         <a href="#habilidades">Habilidades</a>
                         <a href="#trabajos">Trabajos</a>
                         <a href="#contacto">Contacto</a>
                     </nav>
     
                     <!-- Icono del menu responsive-->
-                    <div id="icono-nav">
+                    <div id="icono-nav" onclick="responsiveMenu()">
                         <i class="fa-solid fa-bars"></i>
                     </div>
     
@@ -63,7 +62,7 @@
                 <div class="col">
                     <div class="score">
                         <div class="box">
-                            <div class="chart chart1" data-percent="95">
+                            <div class="chart" data-percent="95">
                                 95%
                             </div>
                             <h2>HTML & CSS</h2>
@@ -73,7 +72,7 @@
                 <div class="col">
                     <div class="score">
                         <div class="box">
-                            <div class="chart chart2" data-percent="90">
+                            <div class="chart" data-percent="90">
                                 90%
                             </div>
                             <h2>BOOSTRAP</h2>
@@ -83,7 +82,7 @@
                 <div class="col">
                     <div class="score">
                         <div class="box">
-                            <div class="chart chart3" data-percent="85">
+                            <div class="chart" data-percent="85">
                                 85%
                             </div>
                             <h2>JAVASCRIPT</h2>
@@ -95,7 +94,7 @@
                 <div class="col">
                     <div class="score">
                         <div class="box">
-                            <div class="chart chart4" data-percent="70">
+                            <div class="chart" data-percent="70">
                                 70%
                             </div>
                             <h2>MYSQL</h2>
@@ -105,7 +104,7 @@
                 <div class="col">
                     <div class="score">
                         <div class="box">
-                            <div class="chart chart5" data-percent="90">
+                            <div class="chart" data-percent="90">
                                 90%
                             </div>
                             <h2>PHP</h2>
@@ -115,7 +114,7 @@
                 <div class="col">
                     <div class="score">
                         <div class="box">
-                            <div class="chart chart6" data-percent="90">
+                            <div class="chart" data-percent="90">
                                 90%
                             </div>
                             <h2>PHOTOSHOP</h2>
@@ -131,10 +130,7 @@
         <h2>Mis Trabajos</h2>
 
         <nav>
-            <a href="javascript:void(0)" class="borde" id="item">Todos</a>
-            <a href="javascript:void(0)" class="borde" id="item">Todos</a>
-            <a href="javascript:void(0)" class="borde" id="item">Todos</a>
-            <a href="javascript:void(0)" class="borde" id="item">Todos</a>
+            <a href="javascript:void(0)" class="" id="item" onclick="verCategoria('item')">Todos</a>
         </nav>
 
         <div class="galeria">
@@ -157,6 +153,42 @@
         </div>
     </section>
 
+    <!-- Sección CONTACTO -->
+    <section class="contacto" id="contacto">
+        <div class="contenedor-contacto">
+            <h2>Contacto</h2>
+            <div class="fila">
+                <div class="col">
+                    <div class="info">
+                        <h3>Email:</h3>
+                        <p>lourdesgiolongo@gmail.com</p>
+                    </div>
+                    <div class="info">
+                        <h3>Telefono:</h3>
+                        <p>3425521476</p>
+                    </div>
+                    <div class="info">
+                        <h3>Pais:</h3>
+                        <p>Argentina</p>
+                    </div>
+                    <div class="info">
+                        <h3>Cuidad:</h3>
+                        <p>Santa Fe</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <input type="text" placeholder="Nombre...">
+                    <input type="text" placeholder="Correo...">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <input type="submit" value="Enviar" class="btn">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Creado Por Maria Lourdes Giolongo -- 2024 -- </p>
+    </footer>
     <script src="app.js">
 
     </script>
