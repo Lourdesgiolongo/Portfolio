@@ -12,7 +12,7 @@ html{
 }
 
 body{
-    background-color: #54a2c9;
+    background-color: #090909;
 }
 
 /* SECCION INICIO */
@@ -137,12 +137,11 @@ body{
 }
 
 
-/* SECCIÓN HABILIDADES */
+/*----------------------------SECCIÓN HABILIDADES------------------------*/
 
 .habilidades{
     max-width: auto;
-    margin: 20px;
-    padding: 0 20px;
+    margin: 100px;
     position: relative;
     top: 10px;
     z-index: 10;
@@ -151,23 +150,21 @@ body{
 .habilidades .fila{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .habilidades h2{
     color: #0039a9;
     text-align: center;
-}
+} 
 
 .habilidades .fila .col{
     text-align: center;
-    width: 30%;
+    width: 25%;
 }
 .habilidades .fila .col .card{
-    border: 1px solid #8d8d8d;
-    height: 200px;
-    background-color: #fff;
-    padding: 30px;
+    height: 180px;
+    background: linear-gradient(to right, #ff7327, #eee71a);    padding: 30px;
     border-radius: 20px;
     position: relative;
 }
@@ -218,7 +215,7 @@ body{
     transform: translateX(-50%);
 }
 
-/* SECCIÓN TRABAJOS */
+/*--------------------------------------------SECCIÓN TRABAJOS---------------------------------------*/
 
 .trabajos{
     max-width: 1100px;
@@ -239,16 +236,13 @@ body{
 .trabajos nav a{
     text-decoration: none;
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 10px;
     color: #007be5;
     font-weight: bold;
     padding: 3px 0px;
     border: 3px solid transparent;
 }
 
-.trabajos nav a:hover{
-    border: 3px solid #ff5b00;
-}
 
 /* Esta clase se agregara dinamicamente cuando haya seleccionada una opcion */
 .borde{
@@ -270,8 +264,7 @@ body{
 .trabajos .galeria .item{
     position: relative;
     overflow: hidden;
-    border: 1px solid #8d8;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .trabajos .galeria .item .info{
@@ -281,7 +274,7 @@ body{
     bottom: 0;
     text-align: center;
     font-size: 24px;
-    background-color: #6032ae;
+    background: linear-gradient(to right, #a33681, #6032ae);
     width: 100%;
     padding: 150px;
     opacity: 0;
@@ -289,7 +282,7 @@ body{
 
 }
 .trabajos .galeria .item .info h3{
-    color: #fff;
+    color: #ffffff88;
     margin-bottom: 20px;
 }
 
@@ -297,6 +290,7 @@ body{
     color: #ff5b00;
     display: inline-block;
     border: 2px solid #ca570f;
+    border-radius: 5px;
     margin: 0 3px;
     padding: 0 5px;
 }
@@ -305,8 +299,8 @@ body{
     display: block;
     margin: 20px;
     text-decoration: none;
-    color: #007be5;
-    font-weight: bold;
+    color: #ffffff88;
+    
 }
 
 .trabajos .galeria .item:hover .info{
@@ -314,13 +308,13 @@ body{
     top: 0;
 }
 
-/* Sección Contacto */
+/*---------------------------Sección Contacto------------------------------------*/
 
 .contacto{
     background: linear-gradient(to right, #a33681, #6032ae);
     width: 85%;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 115px;
     padding: 10px 50px;
     border-radius: 20px;
     margin-bottom: 10px;
@@ -347,9 +341,14 @@ body{
     width: 50%;
 }
 
+.contacto input::placeholder,
+.contacto textarea::placeholder {
+    color: #ffffff;
+}
+
 .contacto .contenedor-contacto .info{
     margin-bottom: 30px;
-    border-left: 3px solid #8d8d8d;
+    border-left: 3px solid #000000;
 }
 
 .contacto .contenedor-contacto .info p{
@@ -362,18 +361,18 @@ body{
     border: none;
     background-color: transparent;
     padding: 10px;
-    border: 1px solid #ffffff;
+    border: 2px solid #000000;
     border-radius: 10px;
     margin-bottom: 20px;
     outline: none;
-    color: #ff5b00;
+    color: #fff;
 }
 
 .contacto .btn{
     background-color: none;
     padding: 5px 4px;
     border: 2px solid;
-    color: #fff;
+    color: #000000;
     cursor: pointer;
     background: linear-gradient(to right, #ff5b00, #ff9900);
 }
@@ -383,7 +382,8 @@ body{
     transition: transform 0.3s ease;
 }
 
-/* SECCIÓN RESPONSIVE */
+/*-----------------------------------SECCIÓN RESPONSIVE-------------------------------------*/
+
 @media screen and (max-width:1180px){
     .inicio{
         clip-path: none;
@@ -394,6 +394,7 @@ body{
     .redes{
         display: none;
     }
+
     #nav{
         display: none;
     }
@@ -405,7 +406,7 @@ body{
         width: 100%;
         position: absolute;
         padding: 10px;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -414,10 +415,24 @@ body{
     #nav.responsive a{
         font-size: 30px;
     }
-    #icono-nav{
+
+    #icono-nav:hover{
+        background-color: #3ed;
+    }
+
+    #icono-nav {
         display: block;
     }
 
+    #nav.responsive span{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 20px;
+    }
+    
     .inicio{
         height: auto;
     }
@@ -440,6 +455,7 @@ body{
         position: static;
         padding: 20px;
     }
+
     .habilidades .fila{
         display: block;
         margin-bottom: 0;
