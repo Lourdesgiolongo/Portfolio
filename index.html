@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagenes/Icono.png" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js" integrity="sha512-DHNepbIus9t4e6YoMBSJLwl+nnm0tIwMBonsQQ+W9NKN6gVVVbomJs9Ii3mQ+HzGZiU5FyJLdnAz9a63ZgZvTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -56,56 +57,73 @@
     
     <!-- Sección HABILIDADES -->
     
-    <section class="habilidades" id="habilidades">
-        <p class="text1">Explore My</p>
-        <h1 class="title">SKILLS</h1>
-        <div class="skills-detail-container">
-            <div class="about-container">
-                <div class="details-container">
-                    <div class="article-container">
-                        <article>
-                            <img src="Imagenes/htmlIcon.png" alt="skill-icon" class="icon"/>
-                            <div>
-                                <h3>HTML</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="Imagenes/cssIcon.png" alt="skill-icon" class="icon"/>
-                            <div>
-                                <h3>CSS</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="Imagenes/jsIcon.png" alt="skill-icon" class="icon"/>
-                            <div>
-                                <h3>JavaScript</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="Imagenes/pythonIcon.png" alt="skill-icon" class="icon"/>
-                            <div>
-                                <h3>Python</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="Imagenes/mysqlIcon.png" alt="skill-icon" class="icon"/>
-                            <div>
-                                <h3>MySql</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="Imagenes/javaIcon.png" alt="skill-icon" class="icon"/>
-                            <div>
-                                <h3>Java</h3>
-                            </div>
-                        </article>
+    <section id="habilidades" class="habilidades">
+        <h2>Habilidades</h2>
+        <div class="fila">
+            <div class="col">
+                <div class="card">
+                    <div class="icono color1">
+                        <div class="circulo">
+                            <i class="fa-brands fa-python"></i>                        
+                        </div>
                     </div>
+                    <h3>Python</h3>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="icono color2">
+                        <div class="circulo">
+                            <i class="fa-brands fa-java"></i>                        
+                        </div>
+                    </div>
+                    <h3>Java</h3>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="icono color3">
+                        <div class="circulo">
+                            <i class="fa-solid fa-database"></i>                        
+                        </div>
+                    </div>
+                    <h3>MySql</h3>
+                </div>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="col">
+                <div class="card">
+                    <div class="icono color1">
+                        <div class="circulo">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                    </div>
+                    <h3>HTML</h3>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="icono color2">
+                        <div class="circulo">
+                            <i class="fa-brands fa-css3-alt"></i>                           
+                        </div>
+                    </div>
+                    <h3>CSS</h3>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="icono color3">
+                        <div class="circulo">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                    </div>
+                    <h3>JavaScript</h3>
                 </div>
             </div>
         </div>
     </section>
-
-
 
 
     <!-- Sección TRABAJOS -->
@@ -137,45 +155,38 @@
     </section>
 
     <!-- Sección CONTACTO -->
-    <section id="contacto" class="contacto">
-        <div class="contenido-contacto">
-            <div class="img">
-                <img src="Imagenes/contact-img.svg" alt="">
-            </div>
-            <div class="formulario">
-                <h2>Contactanos Ahora</h2>
-                <div class="fila">
-                    <input type="text" placeholder="Pimer Nombre">
-                    <input type="text" placeholder="Apellido">
+    <section class="contacto" id="contacto">
+        <div class="contenedor-contacto">
+            <h2>Contacto</h2>
+            <div class="fila">
+                <div class="col">
+                    <div class="info">
+                        <h3>Email:</h3>
+                        <p>lourdesgiolongo@gmail</p>
+                    </div>
+                    <div class="info">
+                        <h3>Teléfono:</h3>
+                        <p>342-552-1476</p>
+                    </div>
+                    <div class="info">
+                        <h3>País</h3>
+                        <p>Argentina</p>
+                    </div>
+                    <div class="info">
+                        <h3>Ciudad:</h3>
+                        <p>Santa Fe</p>
+                    </div>
                 </div>
-                <div class="fila">
-                    <input type="text" placeholder="Dirección de Email">
-                    <input type="text" placeholder="Nº Teléfono">
+                <div class="col">
+                    <input type="text" placeholder="Nombre...">
+                    <input type="text" placeholder="Correo...">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <input type="submit" value="Enviar" class="btn">
                 </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                <button>Enviar</button>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>Código Web</p>
-        <div class="redes">
-            <a href="#" class="red">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-                
-            <a href="#" class="red">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#" class="red">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-        </div>
-        <p>Creado Por Maria Lourdes Giolongo -- 2024 -- </p>
-    </footer>
-
-    
     <script src="app.js">
 
     </script>
