@@ -12,13 +12,13 @@ html{
 }
 
 body{
-    background-color: #090909;
+    background-color: #B7B3A1;
 }
 
 /* SECCION INICIO */
 
 .inicio{
-    background: linear-gradient(to right, #e80c6f, #ca570f);
+    background: #adc178;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 46% 100%, 1% 97%);
     height: 90vh;
     padding: 0 20px;
@@ -32,21 +32,43 @@ body{
 
 .inicio header{
     display: flex;
-    justify-content: space-between;
-    padding: 30px 0;
     align-items: center;
+    width: 100%;
+    margin: auto;
 }
 
-.inicio .logo{
+.inicio header nav{
+    width: 100%;
+    text-align: center;
+}
+
+.inicio nav{
     display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
     align-items: center;
-    color: #f8f9f9;
-    font-size: 25px;
 }
 
-.inicio .logo i{
-    display: inline-block;
-    margin-right: 20px ;
+#inicio header nav h1{
+    max-width: 60%; /* O cualquier otro valor que funcione para tu diseño */
+    
+    /* text-transform: uppercase;
+    font-size: 25px;
+    line-height: 60px; */
+}
+
+.nav-menu{
+    display: flex;
+    margin-left: 40px;
+    list-style: none;
+}
+
+.nav-menu-link{ 
+    font-size: 15px;
+    margin: 0 10px;
+    line-height: 60px;
+    width: max-content;
 }
 
 #inicio header nav a{
@@ -58,20 +80,41 @@ body{
     border: 2px solid transparent;
 }
 
-#inicio header nav a:hover{
-    border-bottom: 2px solid #00b3ff;
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+  }
+.nav-menu-item:hover {
+    border-bottom: 2px solid #c9184a;
 }
 
-.inicio .redes a{
-    text-decoration: none;
-    color: #fff;
-    display: inline-bloc;
-    margin: 0 15px;
-    font-size: 24px;
+.redes .fa-brands.fa-linkedin,
+.fa-brands.fa-instagram{
+        text-decoration: none;
+        display: inline-bloc;
+        margin: 0 15px;
+        font-size: 25px;
+        transition: .5s;
 }
 
-.inicio .redes a:hover{
-    color: #ff0000;
+.redes .fa-brands.fa-linkedin:hover,
+       .fa-brands.fa-instagram:hover{
+        transform: scale(1.1);
+        padding: 5px 10px;
+        background-color: #c9184a;
+        border-radius: 20px;
+}
+
+/* TOGGLE */
+.nav-toggle{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+
+    display: none;
 }
 
 .inicio .fila{
@@ -103,12 +146,12 @@ body{
 }
 
 .inicio .fila .col button{
-    background:#ff5b00;
+    background:#c9184a;
     width:  fit-content;
     padding:  5px 40px;
-    border: 2px solid #ff5b00;
+    border: 2px solid #a4133c;
+    border-radius: 20px;
     color: #fff;
-    background: linear-gradient(to rifht, #ff5b00, #ff9900);
     transition: .5s;
     cursor: pointer;
 }
@@ -133,7 +176,7 @@ body{
 }
 
 .sombra{
-    filter:drop-shadow(0em 30px 20px #9b2);
+    filter:drop-shadow(0em 30px 20px rgb(240, 234, 210));
 }
 
 
@@ -144,30 +187,41 @@ body{
     margin: 100px;
     position: relative;
     top: 10px;
-    z-index: 10;
 }
 
 .habilidades .fila{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 30px;
 }
 
+.habilidades .col{
+    width: calc(25% - 10px);
+        text-align: center;
+}
 .habilidades h2{
-    color: #0039a9;
+    color: #a4133c;
     text-align: center;
 } 
 
 .habilidades .fila .col{
     text-align: center;
-    width: 25%;
+    width: 30%;
 }
 .habilidades .fila .col .card{
     height: 180px;
-    background: linear-gradient(to right, #ff7327, #eee71a);    padding: 30px;
+    background: linear-gradient(to right, #ff8fab, #fb6f92);    
+    padding: 30px;
     border-radius: 20px;
     position: relative;
 }
+
+.habilidades .fila .col .card h3 {
+    white-space: nowrap; /* Evita el salto de línea */
+    overflow: hidden; /* Oculta el texto que no quepa */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) cuando el texto se recorta */
+}
+
 .habilidades .icono{
     width: 70px;
     height: 70px;
@@ -178,6 +232,7 @@ body{
     justify-content: center;
     margin-bottom: 30px;
 }
+
 .habilidades .icono .circulo{
     width: 90%;
     height: 90%;
@@ -189,26 +244,20 @@ body{
     color: #fff;
     font-size: 20px;
 }
-.color1{
-    background: linear-gradient(#ff9900, #ff5b00);
-}
-.color2{
-    background: linear-gradient(#038aee, #0039a9);
-}
-.color3{
-    background: linear-gradient(#04e2ee, #017795);
-}
+
 .habilidades h3{
     margin-bottom: 20px;
 }
+
 .habilidades .card p{
     color: #8d8d8d;
     line-height: 28px;
     font-size: 12px;
 }
+
 .habilidades .card a{
     text-decoration: none;
-    color: #008cff;
+    color: #a4133c;
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -224,7 +273,7 @@ body{
 }
 
 .trabajos h2{
-    color: #0039a9;
+    color: #a4133c;
     text-align: center;
 }
 
@@ -237,7 +286,7 @@ body{
     text-decoration: none;
     display: inline-block;
     margin: 0 10px;
-    color: #007be5;
+    color: #a4133c;
     font-weight: bold;
     padding: 3px 0px;
     border: 3px solid transparent;
@@ -246,7 +295,7 @@ body{
 
 /* Esta clase se agregara dinamicamente cuando haya seleccionada una opcion */
 .borde{
-    border: 3px solid #ff5b00;
+    border: 3px solid #adc178;
 }
 
 .trabajos .galeria .item img{
@@ -274,7 +323,7 @@ body{
     bottom: 0;
     text-align: center;
     font-size: 24px;
-    background: linear-gradient(to right, #a33681, #6032ae);
+    background-color: #adc178;
     width: 100%;
     padding: 150px;
     opacity: 0;
@@ -287,20 +336,29 @@ body{
 }
 
 .trabajos .galeria .item .info span{
-    color: #ff5b00;
-    display: inline-block;
-    border: 2px solid #ca570f;
+    color: #ffffff88;
+    border: 2px solid #ffffff88;
     border-radius: 5px;
+    cursor:context-menu;
+    display: inline-block;
     margin: 0 3px;
     padding: 0 5px;
 }
 
+
 .trabajos .galeria .item .info a{
+    color: #ff5b00;
+    border: 2px solid #ca570f;
+    border-radius: 5px;
     display: block;
     margin: 20px;
     text-decoration: none;
-    color: #ffffff88;
-    
+    transition: .5s;
+    cursor: pointer;
+}
+
+.trabajos .galeria .item .info a:hover{
+    transform: scale(1.1);
 }
 
 .trabajos .galeria .item:hover .info{
@@ -311,7 +369,7 @@ body{
 /*---------------------------Sección Contacto------------------------------------*/
 
 .contacto{
-    background: linear-gradient(to right, #a33681, #6032ae);
+    background: linear-gradient(to right, #a4133c, #c9184a);
     width: 85%;
     margin: auto;
     margin-top: 115px;
@@ -326,11 +384,13 @@ body{
 }
 
 .contacto h2{
+    color: #ff8fa3;
     text-align: center;
     padding-bottom: 10px;
 }
 
 .contacto h3{
+    color: #ff8fa3;
     padding-left: 10px;
 }
 .contacto .contenedor-contacto .fila{
@@ -348,11 +408,11 @@ body{
 
 .contacto .contenedor-contacto .info{
     margin-bottom: 30px;
-    border-left: 3px solid #000000;
+    border-left: 3px solid #ff8fa3;
 }
 
 .contacto .contenedor-contacto .info p{
-    color: #ffffff;
+    color: #ffb3c1;
     padding-left: 10px;
 }
 
@@ -361,20 +421,25 @@ body{
     border: none;
     background-color: transparent;
     padding: 10px;
-    border: 2px solid #000000;
+    border: 2px solid #ff8fa3;
     border-radius: 10px;
+    margin-top: 10px;
     margin-bottom: 20px;
     outline: none;
     color: #fff;
+}
+
+.contacto label{
+    color: #ff8fa3;
 }
 
 .contacto .btn{
     background-color: none;
     padding: 5px 4px;
     border: 2px solid;
-    color: #000000;
+    color: #ff85a1;
     cursor: pointer;
-    background: linear-gradient(to right, #ff5b00, #ff9900);
+    background: linear-gradient(to right, #ff0a54, #ff477e);
 }
 
 .contacto .btn:hover{
@@ -384,104 +449,88 @@ body{
 
 /*-----------------------------------SECCIÓN RESPONSIVE-------------------------------------*/
 
-@media screen and (max-width:1180px){
-    .inicio{
-        clip-path: none;
+@media (max-width: 970) {
+    #inicio header nav h1 {
+        font-size: 10px;
     }
 }
 
-@media screen and (max-width:800px){
-    .redes{
-        display: none;
-    }
 
-    #nav{
-        display: none;
+@media (max-width: 768px) {
+    body {
+      padding-top: 70px;
     }
-    #nav.responsive{
-        background-color: rgba(0,0,0,.9);
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100%;
-        position: absolute;
-        padding: 10px;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 99;
+  
+    .header {
+      height: 60px;
     }
-    #nav.responsive a{
-        font-size: 30px;
+  
+    .nav-menu {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      background-color: #EA9E8D;
+      position: fixed;
+      top: 60px;
+      width: 100%;
+      padding: 20px 0;
+      height: calc(100% - 60px);
+      overflow-y: auto;
+      left: 100%;
+      transition: left 0.3s;
     }
+  
+    .nav-menu-item {
+      line-height: 70px;
+    }
+  
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+      background: none;
+      color: #83c5f7;
+    }
+  
+    .nav-toggle {
+      display: block;
+    }
+  
+    .nav-menu_visible {
+      left: 0;
+    }
+  
+    .nav-toggle:focus:not(:focus-visible) {
+      outline: none;
+    }
+  }
 
-    #icono-nav:hover{
-        background-color: #3ed;
+@media screen and (min-width: 740px) {
+    .habilidades .fila .col .card {
+    width: calc(100% - 40px); /* Ancho del fondo de las habilidades menos márgenes */
     }
+}
 
-    #icono-nav {
-        display: block;
-    }
-
-    #nav.responsive span{
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        color: #fff;
-        font-size: 20px;
-    }
-    
-    .inicio{
-        height: auto;
-    }
-    .inicio .fila{
-        display: block;
-    }
-    .inicio .fila .col{
-        width: 100%;
-        text-align: center;
-    }
-    .inicio .fila .col h2{
-        margin-top: 20px;
-    }
-    .inicio .fila .col .contenedor-img{
-        width: 50%;
-        margin-top: 30px;
-    }
-
-    .habilidades{
-        position: static;
+  @media (max-width: 600px) {
+    .contacto{
         padding: 20px;
     }
 
-    .habilidades .fila{
-        display: block;
-        margin-bottom: 0;
-    }
-    .habilidades .fila .col{
-        width: 70%;
-        margin: auto;
-    }
-    .habilidades .fila .col .card{
-        margin-bottom: 20px;
+    .contacto .contenedor-contacto .fila {
+        flex-direction: column; /* Coloca las columnas una encima de la otra */
     }
 
-    .trabajos nav a{
-        margin: 0 5px;
+    .contacto .contenedor-contacto .fila .col {
+        width: 100%; /* Ancho completo para cada columna */
     }
 
-    .contacto .fila{
-        display:  block !important;
+    .contacto .contenedor-contacto .info {
+        margin-bottom: 15px; /* Reduce el espacio entre las secciones de información */
+        border-left: none; /* Elimina el borde izquierdo */
+        border-bottom: 3px solid #ff8fa3; /* Agrega un borde inferior */
+        padding-bottom: 15px; /* Agrega espacio alrededor de la información */
     }
-    .contacto .fila .col{
-        text-align: center;
-        width: 100% !important;
+
+    .contacto input,
+    .contacto textarea {
+        margin-bottom: 15px; /* Agrega espacio entre los campos de entrada */
     }
-    .contacto .fila .col .info{
-        float: left;
-        font-size: 12px;
-        width: 25%;
-    }
-}
+  }
