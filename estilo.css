@@ -19,8 +19,8 @@ body{
 
 .inicio{
     background: #adc178;
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 46% 100%, 1% 97%);
-    height: 90vh;
+    clip-path: polygon(50% 0%, 100% 0, 100% 82%, 0 100%, 0 0);
+    height: 70vh;
     padding: 0 20px;
 }
 
@@ -51,11 +51,7 @@ body{
 }
 
 #inicio header nav h1{
-    max-width: 60%; /* O cualquier otro valor que funcione para tu diseño */
-    
-    /* text-transform: uppercase;
-    font-size: 25px;
-    line-height: 60px; */
+    max-width: 60%; 
 }
 
 .nav-menu{
@@ -87,6 +83,7 @@ body{
 .nav-menu-item:hover {
     border-bottom: 2px solid #c9184a;
 }
+
 
 .redes .fa-brands.fa-linkedin,
 .fa-brands.fa-instagram{
@@ -136,13 +133,17 @@ body{
     margin-bottom: 20px;
 }
 
+
 .inicio .fila .col .contenedor-img{
-    max-width: 400px;
-    margin: auto;
+    max-width: 380px;
+    margin-top: -50px;
+    margin-right: 15px;
+    text-align: right;
 }
 
 .inicio .fila .col .contenedor-img img{
-    width: 100%;
+    width: 80%;
+    object-fit: contain;
 }
 
 .inicio .fila .col button{
@@ -199,6 +200,7 @@ body{
     width: calc(25% - 10px);
         text-align: center;
 }
+
 .habilidades h2{
     color: #a4133c;
     text-align: center;
@@ -208,7 +210,10 @@ body{
     text-align: center;
     width: 30%;
 }
+
 .habilidades .fila .col .card{
+    display: flex;
+    flex-wrap: wrap;
     height: 180px;
     background: linear-gradient(to right, #ff8fab, #fb6f92);    
     padding: 30px;
@@ -449,22 +454,87 @@ body{
 
 /*-----------------------------------SECCIÓN RESPONSIVE-------------------------------------*/
 
-@media (max-width: 970) {
+@media (max-width: 1150px) {
+    .inicio .fila .col h2{
+        color: #3ed;
+        white-space: nowrap;
+    }
+
+    .inicio{
+        clip-path: polygon(50% 0%, 100% 0, 100% 74%, 0 89%, 0 0);
+    }
+
+}
+
+@media (max-width: 970px) {
     #inicio header nav h1 {
-        font-size: 10px;
+        font-size: 15px;
+    }
+    
+}
+
+@media (max-width: 905px) {
+    
+    #inicio header nav a{
+        font-size: 10px;}
+
+    .nav-menu {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav-menu-item{
+        margin: 0 10px;
+    }
+
+    .redes{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+
+    .redes .fa-brands.fa-linkedin,
+       .fa-brands.fa-instagram{
+        font-size: 15px;
+        margin-bottom: 10px;
     }
 }
 
+@media (max-width: 833px) {
+    #inicio header nav h1{
+        font-size: 11px;
+    }  
 
-@media (max-width: 768px) {
+    #inicio header nav a{
+        font-size: 10px;
+    }
+
+    .redes .fa-brands.fa-linkedin,
+    .fa-brands.fa-instagram{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 790px) {
+
     body {
       padding-top: 70px;
+    }
+
+    .inicio{
+        clip-path: polygon(50% 0%, 100% 0, 100% 56%, 0 75%, 0 0);
     }
   
     .header {
       height: 60px;
     }
   
+    #inicio header nav h1,
+    .nav-toggle {
+        margin-top: 15px;
+    }
+
     .nav-menu {
       flex-direction: column;
       align-items: center;
@@ -472,16 +542,16 @@ body{
       background-color: #EA9E8D;
       position: fixed;
       top: 60px;
-      width: 100%;
+      width: 30%;
       padding: 20px 0;
       height: calc(100% - 60px);
       overflow-y: auto;
-      left: 100%;
-      transition: left 0.3s;
+      right: 100%;
+      transition: right 0.3s ease;
     }
   
     .nav-menu-item {
-      line-height: 70px;
+        line-height: 70px;
     }
   
     .nav-menu-link:hover,
@@ -491,15 +561,34 @@ body{
     }
   
     .nav-toggle {
-      display: block;
+        display: block;
+      order: -1;
+      margin-right: auto;
     }
   
+    .nav-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: auto;
+    }
+
     .nav-menu_visible {
       left: 0;
     }
   
     .nav-toggle:focus:not(:focus-visible) {
       outline: none;
+    }
+
+    .redes .fa-brands.fa-linkedin,
+    .fa-brands.fa-instagram{
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    .redes .fa-brands.fa-linkedin {
+        margin-left: 10px;
     }
   }
 
@@ -534,3 +623,5 @@ body{
         margin-bottom: 15px; /* Agrega espacio entre los campos de entrada */
     }
   }
+
+ 
